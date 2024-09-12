@@ -1,15 +1,21 @@
 /* Algemene styling */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     color: #333;
     transition: background-color 0.3s ease;
 }
 
 .container {
+    flex: 1; /* Zorgt ervoor dat de container de beschikbare ruimte opvult */
     margin: 20px;
 }
 
