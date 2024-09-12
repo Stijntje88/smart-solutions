@@ -14,8 +14,39 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Animaties */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Algemene animatieclassen */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Styling voor de container */
 .container {
-    flex: 1; /* Zorgt ervoor dat de container de beschikbare ruimte opvult */
+    flex: 1;
     margin: 20px;
 }
 
@@ -25,6 +56,7 @@ header {
     padding: 10px 20px;
     border-bottom: 2px solid #0056b3;
     transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .header-content {
@@ -73,6 +105,7 @@ nav ul li a:hover {
     background-color: #f4f4f4;
     border-radius: 10px;
     transition: background-color 0.3s ease;
+    animation: slideIn 1s ease-out;
 }
 
 .welcome-section:hover {
@@ -110,6 +143,7 @@ nav ul li a:hover {
     background-color: #e9f5ff;
     border-radius: 10px;
     border: 2px solid #ffd700;
+    animation: slideIn 1s ease-out;
 }
 
 .about-section h1 {
@@ -146,6 +180,7 @@ nav ul li a:hover {
     background-color: #f9f9f9;
     border-radius: 10px;
     border: 2px solid #0056b3;
+    animation: slideIn 1s ease-out;
 }
 
 .contact-section h1 {
@@ -207,12 +242,13 @@ button:hover {
 
 /* Styling voor de footer */
 footer {
-    background-color: #0056b3; /* Kleur van de footer */
-    color: #ffffff; /* Tekstkleur in de footer */
-    padding: 40px 20px; /* Verhoogde padding voor een bredere footer */
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 40px 20px;
     text-align: center;
-    border-top: 4px solid #ffd700; /* Bovenrandkleur van de footer */
-    margin-top: 20px; /* Ruimte boven de footer */
+    border-top: 4px solid #ffd700;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .footer-content {
@@ -224,13 +260,13 @@ footer {
 }
 
 .footer-logo {
-    height: 60px; /* Verhoogde hoogte voor beter zichtbaarheid */
+    height: 60px;
     width: auto;
     margin-bottom: 15px;
 }
 
 .footer-nav {
-    margin: 20px 0; /* Vergrote marge voor meer ruimte */
+    margin: 20px 0;
 }
 
 .footer-nav ul {
@@ -241,13 +277,13 @@ footer {
 
 .footer-nav ul li {
     display: inline;
-    margin: 0 20px; /* Vergrote marge tussen items */
+    margin: 0 20px;
 }
 
 .footer-nav ul li a {
     text-decoration: none;
     color: #ffd700;
-    font-size: 1.2em; /* Vergrote tekstgrootte voor betere zichtbaarheid */
+    font-size: 1.2em;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -259,7 +295,7 @@ footer {
 .footer-text {
     font-size: 0.9em;
     color: #e0e0e0;
-    margin-top: 20px; /* Vergrote marge boven de tekst */
+    margin-top: 20px;
 }
 
 /* Responsieve styling voor de footer */
@@ -275,7 +311,7 @@ footer {
 
     .footer-nav ul li {
         display: block;
-        margin: 10px 0; /* Vergrote marge voor mobiele weergave */
+        margin: 10px 0;
     }
 }
 
